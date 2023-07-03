@@ -90,3 +90,11 @@ data <- t(as.data.frame(gene_lens))
 # 写入文件
 write.table(data, file = "mRatBN7.2_gene_len.tsv", row.names = TRUE, sep="\t", quote = FALSE, col.names = FALSE)
 ```
+
+# 安装软件包
+```r
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager") 
+BiocManager::install("DESeq2")
+library(DESeq2)
+```
